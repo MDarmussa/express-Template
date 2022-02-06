@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Friend List</title>
+     ${head}
+</head>
+<body>
+     ${navbar}
+     <h1>Friend List</h1>
+
+
+     <!-- <a href="http://127.0.0.1:2600/"><button>Back Home</button></a> -->
+
+
+<div>
+     ${friendData.map(f => `
+     <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="./partials/skyler.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">${f.name}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="${path}/${f.handle}">${f.name}</a>          
+          </div>
+     </div>
+     `).join('')}
+
+</div>
+
+   
+
+</body>
+</html>
+
+
